@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane & Joe - Caribbean Wedding 2026</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join us for our wedding celebration at Sandals Royal Caribbean, Montego Bay, Jamaica on July 12, 2026">
+    <meta name="keywords" content="wedding, destination wedding, Jamaica, Sandals, Jane and Joe">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Jane & Joe - Wedding Celebration">
+    <meta property="og:description" content="July 12, 2026 | Montego Bay, Jamaica">
+    <meta property="og:image" content="assets/images/hero-bg.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <script src="https://unpkg.com/@tabler/icons@latest/icons-react/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        /* ==================== CSS VARIABLES - SUNSET PALETTE ==================== */
+        :root {
+            /* Palette 3 - Vibrant Sunset/Tropical Colors */
+            --navy: #03071E;
+            --dark-red: #370617;
+            --burgundy: #6A040F;
+            --red: #9D0208;
+            --bright-red: #D00000;
+            --orange-red: #DC2F02;
+            --orange: #E85D04;
+            --light-orange: #F48C06;
+            --gold: #FAA307;
+            --yellow: #FFBA08;
+
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-script: 'Dancing Script', cursive;
+            --font-sans: 'Montserrat', sans-serif;
+
+            /* Spacing */
+            --section-padding: 80px 20px;
+            --max-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--navy);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ==================== HUB/HERO SECTION ==================== */
+        .hub-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-red) 50%, var(--burgundy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hub-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            filter: blur(2px);
+        }
+
+        .hub-content {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: rgba(255, 186, 8, 0.2);
+            backdrop-filter: blur(10px);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+
+        .music-player:hover {
+            background: rgba(255, 186, 8, 0.4);
+            transform: scale(1.1);
+        }
+
+        .music-icon {
+            font-size: 28px;
+            color: var(--yellow);
+        }
+
+        /* Hero Names */
+        .hero-names {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 50%, var(--light-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 8px;
+            text-shadow: 0 4px 20px rgba(255, 186, 8, 0.3);
+        }
+
+        .hero-script {
+            font-family: var(--font-script);
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-details {
+            font-family: var(--font-sans);
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .hero-details strong {
+            color: var(--yellow);
+            font-weight: 600;
+        }
+
+        /* Countdown in Hero */
+        .countdown-hub {
+            display: flex;
+            gap: 30px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .countdown-card {
+            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--orange);
+            border-radius: 20px;
+            padding: 30px 40px;
+            min-width: 120px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .countdown-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--yellow);
+            box-shadow: 0 20px 40px rgba(255, 186, 8, 0.3);
+        }
+
+        .countdown-number {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--yellow);
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-family: var(--font-sans);
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            color: var(--gold);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        /* Navigation Grid */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .nav-card {
+            background: linear-gradient(135deg, rgba(157, 2, 8, 0.3) 0%, rgba(106, 4, 15, 0.3) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--burgundy);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 186, 8, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-card:hover::before {
+            left: 100%;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: var(--yellow);
+            box-shadow: 0 25px 50px rgba(255, 186, 8, 0.4);
+            background: linear-gradient(135deg, rgba(232, 93, 4, 0.4) 0%, rgba(220, 47, 2, 0.4) 100%);
+        }
+
+        .nav-icon {
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-card:hover .nav-icon {
+            color: var(--yellow);
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .nav-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--yellow);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .nav-description {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ==================== SECTION STYLES ==================== */
+        .section {
+            display: none;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-red) 100%);
+            position: relative;
+            padding: var(--section-padding);
+            overflow-y: auto;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--light-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-sans);
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        /* Back Home Button */
+        .back-home-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-red) 100%);
+            color: white;
+            border: 2px solid var(--yellow);
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(232, 93, 4, 0.4);
+        }
+
+        .back-home-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.6);
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 100%);
+            color: var(--navy);
+        }
+
+        /* Welcome Section Content */
+        .welcome-text {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        /* Event Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(220, 47, 2, 0.2) 0%, rgba(157, 2, 8, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--orange-red);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(255, 186, 8, 0.3);
+        }
+
+        .timeline-time {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--yellow);
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .timeline-details h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .timeline-details p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid var(--orange);
+            transition: all 0.4s ease;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: var(--yellow);
+            box-shadow: 0 20px 50px rgba(255, 186, 8, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Attire Section */
+        .attire-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .attire-image {
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid var(--gold);
+            box-shadow: 0 20px 60px rgba(255, 186, 8, 0.3);
+        }
+
+        .attire-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .attire-details {
+            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--orange);
+            border-radius: 25px;
+            padding: 50px;
+        }
+
+        .attire-details h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--yellow);
+            margin-bottom: 30px;
+        }
+
+        .attire-details p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(157, 2, 8, 0.3) 0%, rgba(106, 4, 15, 0.3) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--burgundy);
+            border-radius: 20px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--orange);
+        }
+
+        .faq-question {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--yellow);
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(232, 93, 4, 0.2);
+        }
+
+        .faq-answer {
+            padding: 0 30px 30px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .faq-icon {
+            font-size: 24px;
+            color: var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* RSVP Section */
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--orange);
+            border-radius: 30px;
+            padding: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(3, 7, 30, 0.6);
+            border: 2px solid var(--burgundy);
+            border-radius: 15px;
+            color: white;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--yellow);
+            box-shadow: 0 0 20px rgba(255, 186, 8, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-red) 100%);
+            border: 2px solid var(--yellow);
+            border-radius: 50px;
+            color: white;
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.6);
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 100%);
+            color: var(--navy);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .countdown-hub {
+                gap: 15px;
+            }
+
+            .countdown-card {
+                padding: 20px 25px;
+                min-width: 90px;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-time {
+                min-width: auto;
+            }
+
+            .attire-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-home-btn {
+                top: 20px;
+                left: 20px;
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .music-player {
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <i class="ti ti-music music-icon" id="musicIcon"></i>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="./assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- HUB/HOME SECTION -->
+    <div class="hub-container" id="hub">
+        <img src="assets/images/hero-bg.jpg" alt="Jane and Joe" class="hub-background">
+        <div class="hub-content">
+            <div class="hero-script animate__animated animate__fadeIn">Together Forever</div>
+            <h1 class="hero-names animate__animated animate__fadeIn animate__delay-1s">Jane & Joe</h1>
+            <div class="hero-details animate__animated animate__fadeIn animate__delay-2s">
+                <strong>July 12, 2026</strong><br>
+                Sandals Royal Caribbean · Montego Bay, Jamaica
+            </div>
+
+            <!-- Countdown in Hero -->
+            <div class="countdown-hub">
+                <div class="countdown-card animate__animated animate__fadeInUp animate__delay-3s">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-card animate__animated animate__fadeInUp" style="animation-delay: 3.2s;">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-card animate__animated animate__fadeInUp" style="animation-delay: 3.4s;">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-card animate__animated animate__fadeInUp" style="animation-delay: 3.6s;">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Navigation Grid -->
+            <div class="nav-grid">
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 4s;" onclick="showSection('welcome')">
+                    <i class="ti ti-heart nav-icon"></i>
+                    <div class="nav-title">Our Story</div>
+                    <div class="nav-description">Learn about our journey together</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 4.2s;" onclick="showSection('schedule')">
+                    <i class="ti ti-calendar-event nav-icon"></i>
+                    <div class="nav-title">Schedule</div>
+                    <div class="nav-description">View the celebration timeline</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 4.4s;" onclick="showSection('resort')">
+                    <i class="ti ti-building-castle nav-icon"></i>
+                    <div class="nav-title">The Resort</div>
+                    <div class="nav-description">Explore paradise in Jamaica</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 4.6s;" onclick="showSection('gallery')">
+                    <i class="ti ti-photo nav-icon"></i>
+                    <div class="nav-title">Gallery</div>
+                    <div class="nav-description">Our favorite memories</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 4.8s;" onclick="showSection('attire')">
+                    <i class="ti ti-hanger nav-icon"></i>
+                    <div class="nav-title">Attire</div>
+                    <div class="nav-description">Dress code guidelines</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 5s;" onclick="showSection('faq')">
+                    <i class="ti ti-help nav-icon"></i>
+                    <div class="nav-title">FAQ</div>
+                    <div class="nav-description">Answers to common questions</div>
+                </div>
+
+                <div class="nav-card animate__animated animate__zoomIn" style="animation-delay: 5.2s;" onclick="showSection('rsvp')">
+                    <i class="ti ti-mail nav-icon"></i>
+                    <div class="nav-title">RSVP</div>
+                    <div class="nav-description">Let us know you're coming</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WELCOME SECTION -->
+    <section class="section" id="welcome">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Our Love Story</h2>
+                <p class="section-subtitle">Join Us in Paradise</p>
+            </div>
+            <p class="welcome-text fade-in">
+                We're getting married! After years of adventures together, we're ready to say "I do"
+                surrounded by the crystal-clear waters and white sand beaches of the Caribbean.
+            </p>
+            <p class="welcome-text fade-in">
+                We invite you to join us at the stunning Sandals Royal Caribbean in Montego Bay, Jamaica,
+                for a celebration filled with love, laughter, and unforgettable moments. This isn't just
+                a wedding - it's a tropical escape where we'll create memories that will last a lifetime.
+            </p>
+            <p class="welcome-text fade-in">
+                Your presence means the world to us, and we can't wait to share this special day with
+                the people who have supported us throughout our journey together.
+            </p>
+        </div>
+    </section>
+
+    <!-- SCHEDULE SECTION -->
+    <section class="section" id="schedule">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Celebration Timeline</h2>
+                <p class="section-subtitle">July 12, 2026</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-time">4:00 PM</div>
+                    <div class="timeline-details">
+                        <h3>Ceremony</h3>
+                        <p>Join us at the Beachfront Gazebo as we exchange our vows with the Caribbean Sea as our backdrop. Tropical breezes and sunset colors will set the perfect scene for our "I do's."</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-time">5:30 PM</div>
+                    <div class="timeline-details">
+                        <h3>Cocktail Hour</h3>
+                        <p>Celebrate with signature Caribbean cocktails and hors d'oeuvres on the Sunset Terrace. Enjoy island-inspired drinks and watch the golden hour paint the sky.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-time">7:00 PM</div>
+                    <div class="timeline-details">
+                        <h3>Reception & Dinner</h3>
+                        <p>An evening of dancing, dining, and celebration at the Oceanview Pavilion. Feast on gourmet Caribbean cuisine while we dance under the stars.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-time">10:00 PM</div>
+                    <div class="timeline-details">
+                        <h3>After Party</h3>
+                        <p>Keep the party going at the Beach Bar with live music, tropical drinks, and dancing by the ocean. The celebration continues late into the Caribbean night!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESORT SECTION -->
+    <section class="section" id="resort">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Sandals Royal Caribbean</h2>
+                <p class="section-subtitle">Your Paradise Awaits</p>
+            </div>
+            <p class="welcome-text fade-in">
+                Nestled on Jamaica's stunning north coast, Sandals Royal Caribbean offers the perfect blend
+                of British elegance and Caribbean charm. With pristine beaches, crystal-clear waters, and
+                world-class amenities, this resort provides the ultimate tropical escape.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/resort/1.jpg" alt="Sandals Royal Caribbean Resort">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/resort/2.jpg" alt="Resort Beach View">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/resort/3.jpg" alt="Resort Pool Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="section" id="gallery">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="section-subtitle">Capturing Our Favorite Moments</p>
+            </div>
+            <p class="welcome-text fade-in">
+                From coffee shop conversations to adventures around the world, every moment has led us
+                to this celebration. Here are some of our favorite memories together.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/family/1.jpg" alt="Jane and Joe">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/family/2.jpg" alt="Our Adventures">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="./assets/images/family/3.jpg" alt="Special Moments">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATTIRE SECTION -->
+    <section class="section" id="attire">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Dress Code</h2>
+                <p class="section-subtitle">Elegant Beach Chic</p>
+            </div>
+            <div class="attire-container">
+                <div class="attire-image fade-in">
+                    <img src="./assets/images/attire.jpg" alt="Beach Elegant Attire">
+                </div>
+                <div class="attire-details fade-in">
+                    <h3>What to Wear</h3>
+                    <p>
+                        <strong>For Her:</strong> Flowing sundresses, elegant maxi dresses, or dressy separates in light, breathable fabrics. Think tropical elegance with vibrant colors or soft pastels.
+                    </p>
+                    <p>
+                        <strong>For Him:</strong> Linen shirts with dress slacks or khakis. Light-colored suits are welcome but not required. Embrace the island vibe!
+                    </p>
+                    <p>
+                        <strong>Footwear:</strong> Beach-friendly options recommended - wedges, dressy sandals, or loafers. You'll be walking on sand and grass.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" id="faq">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything You Need to Know</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        When should I arrive in Jamaica?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We recommend arriving at least one day before the wedding (July 11th) to settle in and enjoy the resort. This also gives you a buffer in case of any travel delays.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Do I need a passport?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! All guests will need a valid passport to travel to Jamaica. Make sure your passport is valid for at least 6 months beyond your travel dates.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Are there room blocks available?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We have special group rates at Sandals Royal Caribbean. Contact the resort and mention "Jane & Joe Wedding" for our special group rates. Book early for the best availability!
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        What's the weather like in July?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        July in Jamaica is warm and tropical, with temperatures in the mid-80s°F (around 29°C). Pack light, breathable clothing, sunscreen, and bring a light jacket for air-conditioned spaces.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Can I bring a plus-one?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Please check your invitation for details. Due to venue capacity, we can only accommodate guests formally invited. If you have questions, please reach out to us directly.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        What about gifts?
+                        <i class="ti ti-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Your presence is the greatest gift we could ask for! If you'd like to contribute to our future together, we'll have information about our honeymoon fund. No physical gifts please, as we'll be traveling light!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section class="section" id="rsvp">
+        <button class="back-home-btn" onclick="showHub()">
+            <i class="ti ti-arrow-left"></i> Back Home
+        </button>
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Will You Join Us?</h2>
+                <p class="section-subtitle">We Can't Wait to Celebrate Together</p>
+            </div>
+            <div class="rsvp-form fade-in">
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John & Jane Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance">Will you attend? *</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Please select...</option>
+                            <option value="yes">Joyfully Accept</option>
+                            <option value="no">Regretfully Decline</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10" required placeholder="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions</label>
+                        <textarea id="dietary" name="dietary" placeholder="Please let us know of any dietary restrictions or allergies..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message to the Couple</label>
+                        <textarea id="message" name="message" placeholder="Share your excitement, well wishes, or any questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="ti ti-send"></i> Send RSVP
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ==================== NAVIGATION SYSTEM ====================
+        function showSection(sectionId) {
+            // Hide hub
+            document.getElementById('hub').style.display = 'none';
+
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            targetSection.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Trigger fade-in animations
+            setTimeout(() => {
+                triggerScrollAnimations();
+            }, 100);
+        }
+
+        function showHub() {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show hub
+            document.getElementById('hub').style.display = 'block';
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // ==================== COUNTDOWN TIMER ====================
+        function updateCountdown() {
+            const weddingDate = new Date('2026-07-12T16:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // ==================== MUSIC PLAYER ====================
+        const musicPlayer = document.getElementById('musicPlayer');
+        const music = document.getElementById('backgroundMusic');
+        const musicIcon = document.getElementById('musicIcon');
+        let isPlaying = false;
+
+        musicPlayer.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                musicIcon.className = 'ti ti-music music-icon';
+                isPlaying = false;
+            } else {
+                music.play();
+                musicIcon.className = 'ti ti-player-pause music-icon';
+                isPlaying = true;
+            }
+        });
+
+        // ==================== FAQ ACCORDION ====================
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const wasActive = faqItem.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!wasActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // ==================== SCROLL ANIMATIONS ====================
+        function triggerScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+
+            elements.forEach(element => {
+                element.classList.add('visible');
+            });
+        }
+
+        // Trigger animations on scroll for sections
+        window.addEventListener('scroll', () => {
+            triggerScrollAnimations();
+        });
+
+        // ==================== RSVP FORM ====================
+        document.getElementById('rsvpForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            // Create mailto link
+            const subject = encodeURIComponent('Wedding RSVP - ' + data.name);
+            const body = encodeURIComponent(
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Attending: ${data.attendance}\n` +
+                `Number of Guests: ${data.guests}\n` +
+                `Dietary Restrictions: ${data.dietary || 'None'}\n` +
+                `Message: ${data.message || 'None'}\n`
+            );
+
+            window.location.href = `mailto:wedding@example.com?subject=${subject}&body=${body}`;
+
+            // Show confirmation
+            alert('Thank you for your RSVP! Your email client will open to send your response.');
+        });
+
+        // ==================== CALENDAR DOWNLOAD ====================
+        function downloadCalendar() {
+            const event = {
+                title: 'Jane & Joe Wedding',
+                description: 'Join us for our wedding celebration at Sandals Royal Caribbean Resort in Montego Bay, Jamaica. Ceremony begins at 4:00 PM.',
+                location: 'Sandals Royal Caribbean, Montego Bay, Jamaica',
+                start: '2026-07-12T16:00:00',
+                end: '2026-07-12T23:00:00'
+            };
+
+            const icsContent =
+                'BEGIN:VCALENDAR\n' +
+                'VERSION:2.0\n' +
+                'BEGIN:VEVENT\n' +
+                `DTSTART:${event.start.replace(/[-:]/g, '')}\n` +
+                `DTEND:${event.end.replace(/[-:]/g, '')}\n` +
+                `SUMMARY:${event.title}\n` +
+                `DESCRIPTION:${event.description}\n` +
+                `LOCATION:${event.location}\n` +
+                'END:VEVENT\n' +
+                'END:VCALENDAR';
+
+            const blob = new Blob([icsContent], { type: 'text/calendar' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'jane-joe-wedding.ics';
+            link.click();
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show hub by default
+            showHub();
+
+            // Start countdown
+            updateCountdown();
+        });
+    </script>
+</body>
+</html>
