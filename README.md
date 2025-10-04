@@ -101,6 +101,24 @@ wedding-invitation-hub/
 - **Fonts**: Google Fonts (Playfair Display, Montserrat, Dancing Script)
 - **Color System**: Custom sunset palette inspired by tropical destinations
 
+## Mobile Optimization Best Practices
+
+### ⚠️ IMPORTANT: Countdown Timer Mobile Styling
+
+**Always** ensure countdown boxes are properly sized for mobile devices in future wedding invitation templates:
+
+- **Use fixed width and height**: Set explicit dimensions (e.g., `width: 85px; height: 85px;`) to create uniform square boxes
+- **Adjust font sizes**: Scale down numbers and labels to fit within the square containers
+  - Numbers: ~1.8rem
+  - Labels: ~0.75rem
+- **Add proper spacing**: Use `line-height: 1` on numbers and `margin-top` on labels for balanced spacing
+- **Flexbox centering**: Ensure `display: flex; flex-direction: column; align-items: center; justify-content: center;` for perfect centering
+
+### Background Image Visibility on Mobile
+
+- Increase background image opacity on mobile (0.25 vs 0.15 on desktop) so couples are more visible
+- Balance visibility with maintaining text readability and design elegance
+
 ## Credits
 
 Hub-style luxury destination wedding website template
