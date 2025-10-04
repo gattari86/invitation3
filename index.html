@@ -207,6 +207,38 @@
             font-weight: 500;
         }
 
+        /* Add to Calendar Button */
+        .calendar-btn {
+            margin-top: 40px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--yellow) 100%);
+            color: var(--navy);
+            border: 2px solid var(--yellow);
+            border-radius: 50px;
+            padding: 18px 45px;
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(255, 186, 8, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calendar-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.7);
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--light-orange) 100%);
+        }
+
+        .calendar-btn i {
+            font-size: 24px;
+        }
+
         /* Navigation Grid */
         .nav-grid {
             display: grid;
@@ -737,6 +769,12 @@
                     <span class="countdown-label">Seconds</span>
                 </div>
             </div>
+
+            <!-- Add to Calendar Button -->
+            <button class="calendar-btn animate__animated animate__fadeInUp" style="animation-delay: 3.8s;" onclick="downloadCalendar()">
+                <i class="ti ti-calendar-plus"></i>
+                Add to Calendar
+            </button>
 
             <!-- Navigation Grid -->
             <div class="nav-grid">
