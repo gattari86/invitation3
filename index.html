@@ -28,19 +28,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
-        /* ==================== CSS VARIABLES - SUNSET PALETTE ==================== */
+        /* ==================== CSS VARIABLES - SERENE PALETTE ==================== */
         :root {
-            /* Palette 3 - Vibrant Sunset/Tropical Colors */
-            --navy: #03071E;
-            --dark-red: #370617;
-            --burgundy: #6A040F;
-            --red: #9D0208;
-            --bright-red: #D00000;
-            --orange-red: #DC2F02;
-            --orange: #E85D04;
-            --light-orange: #F48C06;
-            --gold: #FAA307;
-            --yellow: #FFBA08;
+            /* Updated Serene Palette - Elegant Purple & Navy Tones */
+            --blush: #F5E6E8;
+            --light-lavender: #D5C6E0;
+            --medium-purple: #AAA1C8;
+            --dusty-mauve: #967AA1;
+            --navy: #1921A5;
+
+            /* Semantic color assignments for best visual hierarchy */
+            --primary: #1921A5;        /* Navy - backgrounds, dark elements */
+            --secondary: #967AA1;      /* Dusty mauve - accents, borders */
+            --accent: #AAA1C8;         /* Medium purple - highlights, CTAs */
+            --light: #D5C6E0;          /* Light lavender - soft accents */
+            --cream: #F5E6E8;          /* Blush - text highlights, backgrounds */
 
             /* Typography */
             --font-display: 'Playfair Display', serif;
@@ -68,7 +70,7 @@
         /* ==================== HUB/HERO SECTION ==================== */
         .hub-container {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-red) 50%, var(--burgundy) 100%);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--secondary) 50%, var(--accent) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -107,7 +109,7 @@
             top: 30px;
             right: 30px;
             z-index: 1000;
-            background: rgba(255, 186, 8, 0.2);
+            background: rgba(170, 161, 200, 0.2);
             backdrop-filter: blur(10px);
             width: 60px;
             height: 60px;
@@ -117,17 +119,17 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid var(--gold);
+            border: 2px solid var(--light);
         }
 
         .music-player:hover {
-            background: rgba(255, 186, 8, 0.4);
+            background: rgba(170, 161, 200, 0.4);
             transform: scale(1.1);
         }
 
         .music-icon {
             font-size: 28px;
-            color: var(--yellow);
+            color: var(--cream);
         }
 
         /* Hero Names */
@@ -137,18 +139,18 @@
             font-weight: 900;
             text-align: center;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 50%, var(--light-orange) 100%);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light) 50%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             letter-spacing: 8px;
-            text-shadow: 0 4px 20px rgba(255, 186, 8, 0.3);
+            text-shadow: 0 4px 20px rgba(213, 198, 224, 0.3);
         }
 
         .hero-script {
             font-family: var(--font-script);
             font-size: clamp(1.5rem, 4vw, 3rem);
-            color: var(--gold);
+            color: var(--light);
             text-align: center;
             margin-bottom: 40px;
         }
@@ -164,7 +166,7 @@
         }
 
         .hero-details strong {
-            color: var(--yellow);
+            color: var(--cream);
             font-weight: 600;
         }
 
@@ -178,9 +180,9 @@
         }
 
         .countdown-card {
-            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(170, 161, 200, 0.2) 0%, rgba(150, 122, 161, 0.2) 100%);
             backdrop-filter: blur(10px);
-            border: 2px solid var(--orange);
+            border: 2px solid var(--accent);
             border-radius: 20px;
             padding: 30px 40px;
             min-width: 120px;
@@ -190,15 +192,15 @@
 
         .countdown-card:hover {
             transform: translateY(-10px);
-            border-color: var(--yellow);
-            box-shadow: 0 20px 40px rgba(255, 186, 8, 0.3);
+            border-color: var(--light);
+            box-shadow: 0 20px 40px rgba(213, 198, 224, 0.3);
         }
 
         .countdown-number {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            color: var(--yellow);
+            color: var(--cream);
             display: block;
             line-height: 1;
         }
@@ -206,7 +208,7 @@
         .countdown-label {
             font-family: var(--font-sans);
             font-size: clamp(0.8rem, 1.5vw, 1rem);
-            color: var(--gold);
+            color: var(--light);
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -216,9 +218,9 @@
         /* Add to Calendar Button */
         .calendar-btn {
             margin-top: 40px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--yellow) 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--light) 100%);
             color: var(--navy);
-            border: 2px solid var(--yellow);
+            border: 2px solid var(--cream);
             border-radius: 50px;
             padding: 18px 45px;
             font-family: var(--font-sans);
@@ -230,15 +232,15 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 10px 30px rgba(255, 186, 8, 0.4);
+            box-shadow: 0 10px 30px rgba(170, 161, 200, 0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .calendar-btn:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.7);
-            background: linear-gradient(135deg, var(--yellow) 0%, var(--light-orange) 100%);
+            box-shadow: 0 15px 40px rgba(213, 198, 224, 0.7);
+            background: linear-gradient(135deg, var(--light) 0%, var(--cream) 100%);
         }
 
         .calendar-btn i {
@@ -256,9 +258,9 @@
         }
 
         .nav-card {
-            background: linear-gradient(135deg, rgba(157, 2, 8, 0.3) 0%, rgba(106, 4, 15, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(150, 122, 161, 0.3) 0%, rgba(170, 161, 200, 0.3) 100%);
             backdrop-filter: blur(15px);
-            border: 2px solid var(--burgundy);
+            border: 2px solid var(--secondary);
             border-radius: 25px;
             padding: 40px 30px;
             text-align: center;
@@ -277,7 +279,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 186, 8, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(213, 198, 224, 0.2), transparent);
             transition: left 0.5s ease;
         }
 
@@ -287,20 +289,20 @@
 
         .nav-card:hover {
             transform: translateY(-15px) scale(1.05);
-            border-color: var(--yellow);
-            box-shadow: 0 25px 50px rgba(255, 186, 8, 0.4);
-            background: linear-gradient(135deg, rgba(232, 93, 4, 0.4) 0%, rgba(220, 47, 2, 0.4) 100%);
+            border-color: var(--cream);
+            box-shadow: 0 25px 50px rgba(213, 198, 224, 0.4);
+            background: linear-gradient(135deg, rgba(170, 161, 200, 0.4) 0%, rgba(213, 198, 224, 0.4) 100%);
         }
 
         .nav-icon {
             font-size: 48px;
-            color: var(--gold);
+            color: var(--light);
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
         .nav-card:hover .nav-icon {
-            color: var(--yellow);
+            color: var(--cream);
             transform: scale(1.2) rotate(10deg);
         }
 
@@ -308,7 +310,7 @@
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--yellow);
+            color: var(--cream);
             margin-bottom: 10px;
             letter-spacing: 1px;
         }
@@ -325,7 +327,7 @@
         .section {
             display: none;
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-red) 100%);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--secondary) 100%);
             position: relative;
             padding: var(--section-padding);
             overflow-y: auto;
@@ -356,7 +358,7 @@
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
-            background: linear-gradient(135deg, var(--yellow) 0%, var(--light-orange) 100%);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -366,7 +368,7 @@
         .section-subtitle {
             font-family: var(--font-sans);
             font-size: clamp(1rem, 2vw, 1.3rem);
-            color: var(--gold);
+            color: var(--light);
             font-weight: 300;
             letter-spacing: 2px;
         }
@@ -377,9 +379,9 @@
             top: 30px;
             left: 30px;
             z-index: 1000;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-red) 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
             color: white;
-            border: 2px solid var(--yellow);
+            border: 2px solid var(--cream);
             border-radius: 50px;
             padding: 15px 35px;
             font-family: var(--font-sans);
@@ -391,13 +393,13 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 10px 30px rgba(232, 93, 4, 0.4);
+            box-shadow: 0 10px 30px rgba(170, 161, 200, 0.4);
         }
 
         .back-home-btn:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.6);
-            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 100%);
+            box-shadow: 0 15px 40px rgba(213, 198, 224, 0.6);
+            background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
             color: var(--navy);
         }
 
@@ -423,9 +425,9 @@
             gap: 30px;
             margin-bottom: 50px;
             align-items: center;
-            background: linear-gradient(135deg, rgba(220, 47, 2, 0.2) 0%, rgba(157, 2, 8, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(170, 161, 200, 0.2) 0%, rgba(150, 122, 161, 0.2) 100%);
             backdrop-filter: blur(10px);
-            border: 2px solid var(--orange-red);
+            border: 2px solid var(--secondary);
             border-radius: 20px;
             padding: 30px;
             transition: all 0.3s ease;
@@ -433,15 +435,15 @@
 
         .timeline-item:hover {
             transform: translateX(10px);
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(255, 186, 8, 0.3);
+            border-color: var(--light);
+            box-shadow: 0 10px 30px rgba(213, 198, 224, 0.3);
         }
 
         .timeline-time {
             font-family: var(--font-display);
             font-size: 2rem;
             font-weight: 700;
-            color: var(--yellow);
+            color: var(--cream);
             min-width: 120px;
             text-align: center;
         }
@@ -449,7 +451,7 @@
         .timeline-details h3 {
             font-family: var(--font-display);
             font-size: 1.8rem;
-            color: var(--gold);
+            color: var(--light);
             margin-bottom: 10px;
         }
 
@@ -471,15 +473,15 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            border: 3px solid var(--orange);
+            border: 3px solid var(--accent);
             transition: all 0.4s ease;
             aspect-ratio: 1;
         }
 
         .gallery-item:hover {
             transform: scale(1.05) rotate(2deg);
-            border-color: var(--yellow);
-            box-shadow: 0 20px 50px rgba(255, 186, 8, 0.5);
+            border-color: var(--cream);
+            box-shadow: 0 20px 50px rgba(213, 198, 224, 0.5);
         }
 
         .gallery-item img {
@@ -505,8 +507,8 @@
         .attire-image {
             border-radius: 30px;
             overflow: hidden;
-            border: 3px solid var(--gold);
-            box-shadow: 0 20px 60px rgba(255, 186, 8, 0.3);
+            border: 3px solid var(--light);
+            box-shadow: 0 20px 60px rgba(213, 198, 224, 0.3);
         }
 
         .attire-image img {
@@ -516,9 +518,9 @@
         }
 
         .attire-details {
-            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(170, 161, 200, 0.2) 0%, rgba(150, 122, 161, 0.2) 100%);
             backdrop-filter: blur(15px);
-            border: 2px solid var(--orange);
+            border: 2px solid var(--accent);
             border-radius: 25px;
             padding: 50px;
         }
@@ -526,7 +528,7 @@
         .attire-details h3 {
             font-family: var(--font-display);
             font-size: 2.5rem;
-            color: var(--yellow);
+            color: var(--cream);
             margin-bottom: 30px;
         }
 
@@ -544,9 +546,9 @@
         }
 
         .faq-item {
-            background: linear-gradient(135deg, rgba(157, 2, 8, 0.3) 0%, rgba(106, 4, 15, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(150, 122, 161, 0.3) 0%, rgba(170, 161, 200, 0.3) 100%);
             backdrop-filter: blur(15px);
-            border: 2px solid var(--burgundy);
+            border: 2px solid var(--secondary);
             border-radius: 20px;
             margin-bottom: 25px;
             overflow: hidden;
@@ -554,13 +556,13 @@
         }
 
         .faq-item:hover {
-            border-color: var(--orange);
+            border-color: var(--accent);
         }
 
         .faq-question {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            color: var(--yellow);
+            color: var(--cream);
             padding: 30px;
             cursor: pointer;
             display: flex;
@@ -570,7 +572,7 @@
         }
 
         .faq-question:hover {
-            background: rgba(232, 93, 4, 0.2);
+            background: rgba(170, 161, 200, 0.2);
         }
 
         .faq-answer {
@@ -588,7 +590,7 @@
 
         .faq-icon {
             font-size: 24px;
-            color: var(--gold);
+            color: var(--light);
             transition: transform 0.3s ease;
         }
 
@@ -600,9 +602,9 @@
         .rsvp-form {
             max-width: 600px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(232, 93, 4, 0.2) 0%, rgba(220, 47, 2, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(170, 161, 200, 0.2) 0%, rgba(150, 122, 161, 0.2) 100%);
             backdrop-filter: blur(15px);
-            border: 2px solid var(--orange);
+            border: 2px solid var(--accent);
             border-radius: 30px;
             padding: 50px;
         }
@@ -615,7 +617,7 @@
             display: block;
             font-family: var(--font-sans);
             font-size: 1.1rem;
-            color: var(--gold);
+            color: var(--light);
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -626,7 +628,7 @@
             width: 100%;
             padding: 15px 20px;
             background: rgba(3, 7, 30, 0.6);
-            border: 2px solid var(--burgundy);
+            border: 2px solid var(--secondary);
             border-radius: 15px;
             color: white;
             font-family: var(--font-sans);
@@ -638,8 +640,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--yellow);
-            box-shadow: 0 0 20px rgba(255, 186, 8, 0.3);
+            border-color: var(--cream);
+            box-shadow: 0 0 20px rgba(213, 198, 224, 0.3);
         }
 
         .form-group textarea {
@@ -650,8 +652,8 @@
         .submit-btn {
             width: 100%;
             padding: 20px;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-red) 100%);
-            border: 2px solid var(--yellow);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            border: 2px solid var(--cream);
             border-radius: 50px;
             color: white;
             font-family: var(--font-sans);
@@ -665,8 +667,8 @@
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 186, 8, 0.6);
-            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 100%);
+            box-shadow: 0 15px 40px rgba(213, 198, 224, 0.6);
+            background: linear-gradient(135deg, var(--light) 0%, var(--cream) 100%);
             color: var(--navy);
         }
 

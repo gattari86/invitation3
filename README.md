@@ -24,18 +24,15 @@ A luxurious hub-style wedding invitation website featuring vibrant sunset colors
 - Animate.css
 - Google Fonts (Playfair Display, Montserrat, Dancing Script)
 
-## Color Palette (Palette 3 - Sunset/Tropical)
+## Color Palette (Updated Serene Palette)
 
-- Navy: #03071E
-- Dark Red: #370617
-- Burgundy: #6A040F
-- Red: #9D0208
-- Bright Red: #D00000
-- Orange-Red: #DC2F02
-- Orange: #E85D04
-- Light Orange: #F48C06
-- Gold: #FAA307
-- Yellow: #FFBA08
+Elegant purple and navy tones create a sophisticated, calming aesthetic:
+
+- Blush/Cream: #F5E6E8 (Text highlights, backgrounds)
+- Light Lavender: #D5C6E0 (Soft accents, borders)
+- Medium Purple: #AAA1C8 (Highlights, CTAs, icons)
+- Dusty Mauve: #967AA1 (Accents, borders, secondary elements)
+- Navy Blue: #1921A5 (Primary backgrounds, dark elements)
 
 ## Hub Navigation Concept
 
